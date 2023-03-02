@@ -55,3 +55,4 @@ while cv.waitKey(0) != ord("q"):
     cv.imshow("y flip function", flip_y(img, row_img, col_img))
 
 cv.destroyAllWindows()
+exit(0)
