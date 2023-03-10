@@ -21,33 +21,11 @@ def average_mask(image, size_of_kernel, target_pixel_y, target_pixel_x):
 
     # compute with row * column for loop
     # i is a row
-    for i in range(size_of_kernel):
-        # j is a column
-        for j in range(size_of_kernel):
-
-            # the pixel's location, which consists the mask
-            x_coordinate = target_pixel_x - (size_of_kernel // 2) + j
-            y_coordinate = target_pixel_y - (size_of_kernel // 2) + i
-
-            # check the row and column are out of the ranges
-            # if targeted index is out of the range
-            if x_coordinate > column - 1 or x_coordinate < 0 \
-                    or y_coordinate > row - 1 or y_coordinate < 0:
-                continue
-            # if index is within the range
-            else:
-                sum_of_colors += image[y_coordinate][x_coordinate]
-                count += 1
-
-    # grayscale value
-    result = sum_of_colors // count
-
-    return result
 
 
 # get the image from the directory
 # use uint16 to prevent from modulo, when average_mask method computes the number which is higher than 255
-img = np.array(cv.imread("../source/bridge.jpg"), dtype=np.uint16)
+img = np.array(cv.imread("../../../source/bridge.jpg"), dtype=np.uint16)
 
 # get the length of the row and column of the image
 row = len(img)
