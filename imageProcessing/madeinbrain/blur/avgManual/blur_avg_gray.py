@@ -4,7 +4,8 @@ import imageProcessing.madeinbrain.blur.avgManual.allOneMask as avg
 
 # get the image from the directory
 # use uint16 to prevent from modulo, when average_mask method computes the number which is higher than 255
-img = np.array(cv.imread("../../../source/bridge.jpg", cv.IMREAD_GRAYSCALE), dtype=np.uint16)
+directory = "../../../source/bridge.jpg"
+img = np.array(cv.imread(directory, cv.IMREAD_GRAYSCALE), dtype=np.uint16)
 
 # size of the kernel, ksize * ksize mask would be applied
 ksize = 5

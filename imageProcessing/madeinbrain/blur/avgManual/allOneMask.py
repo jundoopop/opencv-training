@@ -5,18 +5,12 @@ import numpy as np
 # apply the average mask
 def apply_mask(image, size_of_kernel):
     # length of the row of the image
-    def get_image_row(img):
-        return len(img)
-
+    row = len(image)
     # length of the column of the image
-    def get_image_col(img):
-        return len(img[0])
+    column = len(image[0])
 
     # get a computed pixel value by each
     def average_mask(img, ksize, target_pixel_y, target_pixel_x):
-        # get the lengths of row and column
-        row = get_image_row(img)
-        column = get_image_col(img)
 
         # declare variables for computing
         # valid_masks : how many elements are valid in the mask
@@ -47,16 +41,17 @@ def apply_mask(image, size_of_kernel):
         # result value
         result = sum_of_gray // valid_masks
 
-        return result
-
-    # number to make new canvas
-    row_of_image, col_of_image = get_image_row(image), get_image_col(image)
+        return result.astype(np.uint8)
 
     # new canvas to draw blurred picture declared
-    sketchbook = np.zeros((row_of_image, col_of_image), dtype=np.uint8)
+    if np.shape(image) == (row, column, 3):
+        sketchbook = np.zeros((row, column, 3), dtype=np.uint8)
+    else:
+        sketchbook = np.zeros((row, column), dtype=np.uint8)
+
     # iterate for each pixel
-    for i in range(row_of_image):
-        for j in range(col_of_image):
-            sketchbook[i][j] = average_mask(image, size_of_kernel, i, j)
+    for i in range(row):
+        for j in range(column):
+            sketchbook[i, j] = average_mask(image, size_of_kernel, i, j)
 
     return sketchbook
