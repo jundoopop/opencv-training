@@ -20,7 +20,7 @@ while cv.waitKey(0) != ord("q"):
     # avg mask applied
     cv.imshow("blurred manually", cv.filter2D(image1, -1, gg.gaussianMask(ksize, sd)))
     # opencv cv2.GaussianBlur() applied
-    cv.imshow("built-in blur", cv.GaussianBlur(image2, (5, 5), sigmaX=1))
+    cv.imshow("built-in blur", cv.GaussianBlur(image2, (ksize, ksize), sigmaX=sd))
 
 # after Q key pressed
 cv.destroyAllWindows()

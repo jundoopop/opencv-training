@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def gaussianMask(ksize, sigma):
     # Get the centre value
     centre = ksize // 2
@@ -14,8 +15,8 @@ def gaussianMask(ksize, sigma):
         for j in range(ksize):
             x = i - centre
             y = j - centre
-            kernel[x, y] = (2.71 ** (-(x ** 2 + y ** 2) / (2 * sigma ** 2))) \
-                           / (2 * 3.14 * (sigma ** 2))
+            # apply gaussian formula
+            kernel[x, y] = np.exp(-(pow(x, 2) + pow(y, 2)) / (2 * pow(sigma, 2))) / (2 * 3.14 * pow(sigma, 2))
 
     # Normalize the kernel so that its values sum to 1
     kernel /= np.sum(kernel)
