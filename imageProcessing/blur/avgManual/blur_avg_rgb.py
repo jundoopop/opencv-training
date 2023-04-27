@@ -1,6 +1,6 @@
 import cv2 as cv
 import numpy as np
-import imageProcessing.madeinbrain.blur.avgManual.allOneMask as avg
+import imageProcessing.blur.avgManual.allOneMask as avg
 
 # change each default pixels to blurred ones
 
