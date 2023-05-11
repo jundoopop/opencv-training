@@ -18,6 +18,10 @@ def kernel(ksize, sigma):
             x = i - centre
             y = j - centre
             # apply laplacian formula
-            kernel[x, y] = ((pow(x + 1, 2) + pow(y + 1, 2)) / pow(sigma, 4)) - 2 / pow(sigma, 2)
+            formula = (pow(x, 2) + pow(y, 2)) / (2 * pow(sigma, 2))
+
+            kernel[x, y] = (-1 * (1 / (math.pi * pow(sigma, 4)))) * (1 - formula) * np.exp(formula)
+
+    kernel /= sum(kernel)
 
     return kernel

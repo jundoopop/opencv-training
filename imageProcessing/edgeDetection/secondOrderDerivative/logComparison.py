@@ -21,11 +21,11 @@ while cv.waitKey(0) != ord("q"):
     # default_result -> applied OpenCV library
     pre_LoG = cv.filter2D(sample, depth, gausMat)
     LoGFilter = laplacian.kernel(ksize, sigma)
-    manual_result = cv.filter2D(pre_LoG, depth, LoGFilter)
-    default_result = cv.Laplacian(cv.GaussianBlur(sample, (1, 1), sigma), depth, ksize)
+    manual_result = cv.filter2D(sample, depth, LoGFilter)
+    default_result = cv.Laplacian(cv.GaussianBlur(sample, (ksize, ksize), sigma), depth, ksize)
 
     # show both to compare with
-    cv.imshow(window_name_1, manual_result)
+    cv.imshow(window_name_1, manual_resyult)
     cv.imshow(window_name_2, default_result)
 
 cv.destroyAllWindows()

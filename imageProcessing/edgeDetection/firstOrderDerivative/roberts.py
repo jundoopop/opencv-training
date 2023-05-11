@@ -17,6 +17,6 @@ def convolution(address):
     y_convoluted = cv.filter2D(src, -1, gy)
 
     # operates magnitude
-    roberts_applied = np.sqrt(x_convoluted ** 2 + y_convoluted ** 2).astype(np.uint8)
+    roberts_applied = np.sqrt(np.square(x_convoluted) + np.square(y_convoluted)).astype(np.uint8)
 
     return roberts_applied
