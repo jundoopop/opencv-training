@@ -23,10 +23,7 @@ def sobel_filter(image_file):
     Performs Sobel edge detection on an image.
 
     Args:
-      image: The input image.
-      kernel_size: The size of the Sobel kernel.
-      scale: The scale factor for the Sobel kernel.
-      delta: The delta value for the Sobel kernel.
+      image_file: directory of the image file
 
     Returns:
       The output image.
@@ -43,13 +40,8 @@ def sobel_filter(image_file):
     sobel_x = cv.filter2D(grayscale_image, -1, sobel_x_kernel)
     sobel_y = cv.filter2D(grayscale_image, -1, sobel_y_kernel)
 
-    # Normalize the gradient magnitude to the range [0, 255].
-    gradient_magnitude = np.uint8(255 * gradient_magnitude / gradient_magnitude.max())
-
     # Calculate the result of the Sobel filter.
-    result = cv.convertScaleAbs(
-        np.sqrt(np.square(sobel_x) + np.square(sobel_y)), 1.0, 255
-    )
+    result = np.sqrt(np.square(sobel_x) + np.square(sobel_y)).astype(np.uint8)
 
     # Return the output image.
     return result
