@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 
 
@@ -16,7 +18,7 @@ def gaussianMask(ksize, sigma):
             x = i - centre
             y = j - centre
             # apply gaussian formula
-            kernel[x, y] = np.exp(-(pow(x, 2) + pow(y, 2)) / (2 * pow(sigma, 2))) / (2 * 3.14 * pow(sigma, 2))
+            kernel[x, y] = np.exp(-(pow(x, 2) + pow(y, 2)) / (2 * pow(sigma, 2))) / (2 * math.pi * pow(sigma, 2))
 
     # Normalize the kernel so that its values sum to 1
     kernel /= np.sum(kernel)
