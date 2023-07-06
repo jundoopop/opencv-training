@@ -12,7 +12,7 @@ import numpy as np
 
 
 # Calculating bilinear interpolation pixel value
-def bi_inter(x, y, src):
+def weighted_mean(x, y, src):
     '''Interpolate (x,y) from values associated with four points.
     The four points are a list of four triplets: (x, y, value).
     The four points can be in any order. They should form a rectangle.
@@ -47,6 +47,20 @@ def bi_inter(x, y, src):
     else:
         return np.clip(np.average([upper_avg, lower_avg],
                                   weights=[upper_avg, lower_avg]), 0, 255)  # Weighted average of the two averages
+
+
+def bilinear_kernel(x, y, src):
+    kernel = np.array([[1, 2, 1], [2, 4, 2], [1, 2, 1]])  # Define the kernel
+    temp = 0
+    x -= 2
+    y -= 2
+    for i in range(kernel.shape[0]):  # Loop for thw row and column
+        for j in range(kernel.shape[1]):
+            if x == 0 or y == 0 or x == src.shape[1] - 1 or y == src.shape[0] - 1:
+                continue
+            else:
+                temp += kernel[i, j] * src[y + i - 1, x + j - 1]  # Calculate the result
+    return temp / 16  # Return the result
 
 
 def wavg(p1, p2):  # Weighted average of the two points
