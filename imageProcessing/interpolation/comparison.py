@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 import interLinear as il
+import interCubic as ic
 
 img = cv.imread("../source/resize1.jpg", cv.IMREAD_GRAYSCALE)
 if img is None:
@@ -20,6 +21,10 @@ sketchbook_weighted = np.array(
     [[il.weighted_mean(i // ratio, j // ratio, img) for i in range(dsize[0])] for j in range(dsize[1])])
 sketchbook_convoluted = np.array(
     [[il.bilinear_kernel(i // ratio, j // ratio, img) for i in range(dsize[0])] for j in range(dsize[1])])
+
+sketchbook_cubic_convolution = np.array(
+    [[ic.bicubic_kernel(i // ratio, j // ratio, img) for i in range(dsize[0])] for j in range(dsize[1])])
+
 while cv.waitKey(0) != ord("q"):
     cv.imshow("Original", img)
     # CV library bilinear interpolation
@@ -35,6 +40,9 @@ while cv.waitKey(0) != ord("q"):
     # Custom bilinear interpolation formula -> 3 x 3 kernel
     cv.imshow("Custom bilinear interpolation - convolution",
               sketchbook_convoluted.astype(np.uint8))
+    # Custom bicubic interpolation formula -> 4 x 4 kernel
+    cv.imshow("Custom bicubic interpolation - kernel",
+              sketchbook_cubic_convolution.astype(np.uint8))
 
 cv.destroyAllWindows()
 exit(0)
