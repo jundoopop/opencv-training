@@ -21,12 +21,13 @@ sketchbook_weighted = np.array(
 sketchbook_convoluted = np.array(
     [[il.bilinear_kernel(i // ratio, j // ratio, img) for i in range(dsize[0])] for j in range(dsize[1])])
 while cv.waitKey(0) != ord("q"):
+    cv.imshow("Original", img)
     # CV library bilinear interpolation
     cv.imshow("CV library bilinear interpolation",
               cv.resize(img, dsize, fx=0, fy=0, interpolation=cv.INTER_LINEAR))
 
-    cv.imshow("CV library nearest neighbor interpolation",
-              cv.resize(img, dsize, fx=0, fy=0, interpolation=cv.INTER_NEAREST))
+    # cv.imshow("CV library nearest neighbor interpolation",
+    #           cv.resize(img, dsize, fx=0, fy=0, interpolation=cv.INTER_NEAREST))
 
     # Custom bilinear interpolation formula -> Weighted mean
     cv.imshow("Custom bilinear interpolation - weighted mean",

@@ -7,7 +7,6 @@ where w = x - floor(x) and h = y - floor(y)
 
 """
 
-import cv2 as cv
 import numpy as np
 
 
@@ -62,6 +61,3 @@ def bilinear_kernel(x, y, src):
                 temp += kernel[i, j] * src[y + i - 1, x + j - 1]  # Calculate the result
     return temp / 16  # Return the result
 
-
-def wavg(p1, p2):  # Weighted average of the two points
-    return p1 * p1 / (p1 + p2) + p2 * p2 / (p1 + p2)
