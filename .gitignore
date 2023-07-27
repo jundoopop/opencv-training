@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/git,jetbrains,pycharm+all,python,jupyternotebooks,opencv,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=git,jetbrains,pycharm+all,python,jupyternotebooks,opencv,visualstudiocode
 
+/bin
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
