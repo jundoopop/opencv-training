@@ -11,12 +11,12 @@ filter = np.array(
 )  # Filter to apply to the image (2x2 matrix)
 
 while cv.waitKey(20) != ord("q"):  # Wait for the user to press the "q" key
-    cv.imshow("Default Sample Image", sample1)  # x: 50, y: 100 translation
+    cv.imshow("Default Sample Image", sample1)
     cv.imshow(
         "Move1 Translated - x: 0, y: 80", tr.move(sample1, 0, 80)
     )  # x: 0, y: 80 translation
     cv.imshow(
-        "Move2 Translated - x: 0, y: 80", tr.move2(sample1, 0, 80)
+        "Move2 Translated - x: 50, y: 100", tr.move(sample1, 50, 100)
     )  # x: 0, y: 80 translation
 
 cv.destroyAllWindows()  # Close all windows

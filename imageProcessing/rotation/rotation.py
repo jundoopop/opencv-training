@@ -2,8 +2,8 @@ import cv2 as cv
 import numpy as np
 
 
-def rotate_image(image, angle):
-    rows, cols = image.shape[:2]
+def rotate(image, angle):
+    rows, cols = image.shape
     middle_x, middle_y = cols // 2, rows // 2
 
     # Convert the angle from degrees to radians

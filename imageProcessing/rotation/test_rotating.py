@@ -19,7 +19,7 @@ if img_sample is None:
 while cv.waitKey(20) != ord("q"):
     # Custom Rotation
     cv.imshow(
-        f"Custom: Rotated {angle_for_comparison} degrees", rot.rotate_image(img_sample, 30)
+        f"Custom: Rotated {angle_for_comparison} degrees", rot.rotate(img_sample, 30)
     )  # Rotate the image for degrees set
 
     # OpenCV Rotation
