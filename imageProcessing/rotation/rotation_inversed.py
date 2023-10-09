@@ -1,3 +1,7 @@
+"""
+numpy for computing each pixels of the images
+cv2 for reading and showing images
+"""
 import numpy as np
 import cv2 as cv
 
@@ -64,19 +68,16 @@ def rotate_image(source_image, angle):
 
 
 if __name__ == "__main__":  # Main function for Execution
-    
     path = "/home/treeplanter/graphics/pyOpenCv/imageProcessing/source/paris.jpg"  # Path of the source image
 
-    source_image = cv.imread(path)  # Read the source image
+    targeted_image = cv.imread(path)  # Read the source image
 
-    angle = 30  # Define the angle for rotation
+    theta = 30  # Define the angle for rotation
 
-    destination_image = rotate_image(source_image, angle)  # Apply the function
+    result_image = rotate_image(targeted_image, theta)  # Apply the function
 
     while cv.waitKey(1) != ord("q"):  # Wait for the key 'q' to be pressed
-        cv.imshow(
-            f"Rotated Image: degree {angle}", destination_image
-        )  # Show the result
+        cv.imshow(f"Rotated Image: degree {theta}", result_image)  # Show the result
 
     cv.destroyAllWindows()  # Close all windows when key 'q' is pressed
     exit(0)  # Exit the program
