@@ -1,13 +1,15 @@
-import rotation as rot
+import rotationClock as rot
 import cv2 as cv
 import numpy as np
 
-img_path1 = "/home/treeplanter/graphics/pyOpenCv/imageProcessing/source/paris.jpg"  # Path to the first image
-img_path2 = "/home/treeplanter/graphics/pyOpenCv/imageProcessing/source/bridge.jpg"  # Path to the second image
+IMG_PATH1 = "/home/treeplanter/graphics/pyOpenCv/\
+imageProcessing/source/paris.jpg"  # Path to the first image
+IMG_PATH2 = "/home/treeplanter/graphics/pyOpenCv/\
+imageProcessing/source/bridge.jpg"  # Path to the second image
 
-img_sample = cv.imread(img_path1)  # Get a first sample: Paris
+img_sample = cv.imread(IMG_PATH1)  # Get a first sample: Paris
 img_sample2 = cv.imread(
-    img_path2, cv.IMREAD_GRAYSCALE
+    IMG_PATH2, cv.IMREAD_GRAYSCALE
 )  # Get a second sample: Bridge in London
 
 angle_for_comparison = 30  # Angle to rotate the image
