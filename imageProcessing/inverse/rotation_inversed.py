@@ -41,7 +41,8 @@ def rotate_image(source_image, angle):
             [0, 0, 1],
         ]
     )  # Define the rotation matrix.
-    # When mutliple the matrix with the coordinate of the destination image, the result is the coordinate of the source image.
+    # When mutliple the matrix with the coordinate of the destination image, the result is the coordinate of the
+    # source image.
 
     # Compute the inverse rotation matrix for inversed mapping
     matrix_for_inversion = np.linalg.inv(matrix_for_rotation)
@@ -64,7 +65,7 @@ def rotate_image(source_image, angle):
 
 
 if __name__ == "__main__":  # Main function for Execution
-    
+
     path = "/home/treeplanter/graphics/pyOpenCv/imageProcessing/source/paris.jpg"  # Path of the source image
 
     source_image = cv.imread(path)  # Read the source image
