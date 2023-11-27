@@ -399,4 +399,12 @@ pyrightconfig.json
 .history
 .ionide
 
+
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+archive.zip
+
 # End of https://www.toptal.com/developers/gitignore/api/git,jetbrains,pycharm+all,python,jupyternotebooks,opencv,visualstudiocode
