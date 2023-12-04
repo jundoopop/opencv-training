@@ -407,4 +407,8 @@ pyrightconfig.json
 *.webp
 archive.zip
 
+# Mnist dataset
+*.gz
+*-ubyte
+
 # End of https://www.toptal.com/developers/gitignore/api/git,jetbrains,pycharm+all,python,jupyternotebooks,opencv,visualstudiocode
