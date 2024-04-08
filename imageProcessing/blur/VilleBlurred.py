@@ -2,20 +2,22 @@ import cv2 as cv
 import numpy as np
 from pathlib import Path
 
-
+# Load the image
 source_directory = Path.cwd() / "imageProcessing" / "source"
+# Show the directory if it is correct
 print(f"Image resources directory: {source_directory}")
 
+# Load the image
 img = cv.imread(str(source_directory / "paris.jpg"))
-img_gray = cv.imread(str(source_directory / "paris.jpg"), cv.IMREAD_GRAYSCALE)
 
-white = np.array([255, 255, 255], np.uint8)
-img_CMY = white - img
+if img is None:  # Check if the image is loaded
+    raise Exception("Image not found")
 
-cv.imshow("ville RGB", img)
-cv.imshow("ville HSV", cv.cvtColor(img, cv.COLOR_BGR2HSV))
-cv.imshow("ville CMY", img_CMY)
+# Declare an np array to show images in single window
+stack_two_images = np.hstack((img, cv.blur(img, (9, 9))))
 
+# Show two cases of blurring
+cv.imshow("ville default vs blurring", stack_two_images)
 
 while True:  # keep the window open until we press 'esc'
     key = cv.waitKey(0)
