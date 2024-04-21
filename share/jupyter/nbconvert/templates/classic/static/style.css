@@ -4465,11 +4465,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 541px) {
   .navbar-left {
-    float: left !important;
     float: left;
   }
   .navbar-right {
-    float: right !important;
     float: right;
     margin-right: 0px;
   }
@@ -9133,13 +9131,10 @@ Browsers not listed, including Safari, are supported via the styling under the
 */
 .hbox {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -9157,13 +9152,10 @@ Browsers not listed, including Safari, are supported via the styling under the
 }
 .vbox {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -9429,7 +9421,6 @@ body > #header .header-bar {
   margin-left: 0;
 }
 [dir="rtl"] #ipython_notebook.pull-left {
-  float: right !important;
   float: right;
 }
 .flex-spacer {
@@ -9571,13 +9562,10 @@ span#login_widget > .button .badge,
 }
 .modal_stretch .modal-dialog {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -9615,7 +9603,6 @@ span#login_widget > .button .badge,
   margin-bottom: -4px;
 }
 [dir="rtl"] .center-nav form.pull-left {
-  float: right !important;
   float: right;
 }
 [dir="rtl"] .center-nav .navbar-text {
@@ -9692,14 +9679,13 @@ ul.breadcrumb span {
   color: #5e5e5e;
 }
 .list_toolbar {
-  padding: 4px 0 4px 0;
+  padding: 4px 0;
   vertical-align: middle;
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
 [dir="rtl"] .list_toolbar .tree-buttons .pull-right {
-  float: left !important;
   float: left;
 }
 [dir="rtl"] .list_toolbar .col-sm-4,
@@ -9794,7 +9780,6 @@ ul.breadcrumb span {
   margin-left: 7px;
 }
 [dir="rtl"] .item_modified.pull-right {
-  float: left !important;
   float: left;
 }
 .item_buttons {
@@ -9825,7 +9810,6 @@ ul.breadcrumb span {
   float: left;
 }
 [dir="rtl"] .item_buttons.pull-right {
-  float: left !important;
   float: left;
 }
 [dir="rtl"] .item_buttons .kernel-name {
@@ -9862,7 +9846,6 @@ ul.breadcrumb span {
   padding-left: 7px;
 }
 [dir="rtl"] .sort_button.pull-right {
-  float: left !important;
   float: left;
 }
 #tree-selector {
@@ -9881,7 +9864,6 @@ ul.breadcrumb span {
   height: 16px;
 }
 [dir="rtl"] #select-all.pull-left {
-  float: right !important;
   float: right;
 }
 .menu_icon {
@@ -10388,13 +10370,10 @@ ul#new-menu {
 }
 div.cell {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -10506,13 +10485,10 @@ div.cell.selected.jupyter-soft-selected:before {
 div.inner_cell {
   min-width: 0;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -10543,13 +10519,10 @@ div.prompt:empty {
 div.unrecognized_cell {
   padding: 5px 5px 5px 0px;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -10590,13 +10563,10 @@ div.code_cell {
 div.input {
   page-break-inside: avoid;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -10607,13 +10577,10 @@ div.input {
 @media (max-width: 540px) {
   div.input {
     /* Old browsers */
-    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-align: stretch;
-    display: -moz-box;
     -moz-box-orient: vertical;
     -moz-box-align: stretch;
-    display: box;
     box-orient: vertical;
     box-align: stretch;
     /* Modern browsers */
@@ -10850,13 +10817,10 @@ div.output_wrapper {
   /* this position must be relative to enable descendents to be absolute within it */
   position: relative;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -10882,13 +10846,10 @@ div.output_collapsed {
   margin: 0px;
   padding: 0px;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -10916,13 +10877,10 @@ div.output_area {
   padding: 0px;
   page-break-inside: avoid;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -10957,13 +10915,10 @@ div.output_area .mglyph > img {
    as that of bootstrap */
 .output {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: vertical;
   -moz-box-align: stretch;
-  display: box;
   box-orient: vertical;
   box-align: stretch;
   /* Modern browsers */
@@ -10974,13 +10929,10 @@ div.output_area .mglyph > img {
 @media (max-width: 540px) {
   div.output_area {
     /* Old browsers */
-    display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-align: stretch;
-    display: -moz-box;
     -moz-box-orient: vertical;
     -moz-box-align: stretch;
-    display: box;
     box-orient: vertical;
     box-align: stretch;
     /* Modern browsers */
@@ -10991,7 +10943,7 @@ div.output_area .mglyph > img {
 }
 div.output_area pre {
   margin: 0;
-  padding: 1px 0 1px 0;
+  padding: 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -11097,38 +11049,38 @@ div.output_unrecognized a:hover {
 }
 .rendered_html h1 {
   font-size: 185.7%;
-  margin: 1.08em 0 0 0;
+  margin: 1.08em 0 0;
   font-weight: bold;
   line-height: 1.0;
 }
 .rendered_html h2 {
   font-size: 157.1%;
-  margin: 1.27em 0 0 0;
+  margin: 1.27em 0 0;
   font-weight: bold;
   line-height: 1.0;
 }
 .rendered_html h3 {
   font-size: 128.6%;
-  margin: 1.55em 0 0 0;
+  margin: 1.55em 0 0;
   font-weight: bold;
   line-height: 1.0;
 }
 .rendered_html h4 {
   font-size: 100%;
-  margin: 2em 0 0 0;
+  margin: 2em 0 0;
   font-weight: bold;
   line-height: 1.0;
 }
 .rendered_html h5 {
   font-size: 100%;
-  margin: 2em 0 0 0;
+  margin: 2em 0 0;
   font-weight: bold;
   line-height: 1.0;
   font-style: italic;
 }
 .rendered_html h6 {
   font-size: 100%;
-  margin: 2em 0 0 0;
+  margin: 2em 0 0;
   font-weight: bold;
   line-height: 1.0;
   font-style: italic;
@@ -11233,7 +11185,7 @@ div.output_unrecognized a:hover {
 .rendered_html td {
   text-align: right;
   vertical-align: middle;
-  padding: 0.5em 0.5em;
+  padding: 0.5em;
   line-height: normal;
   white-space: normal;
   max-width: none;
@@ -11285,13 +11237,10 @@ div.output_unrecognized a:hover {
 }
 div.text_cell {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -11515,17 +11464,13 @@ kbd {
   height: 29px;
   padding-right: 4px;
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
-  display: flex;
   flex-direction: row;
   align-items: stretch;
   /* Old browsers */
@@ -11565,25 +11510,15 @@ kbd {
   padding-top: 3px;
 }
 .celltoolbar select {
-  display: block;
-  width: 100%;
-  height: 32px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.42857143;
   color: #555555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
   line-height: 1.5;
   border-radius: 1px;
   width: inherit;
@@ -11672,26 +11607,14 @@ select[multiple].celltoolbar select {
 .cell-tag,
 .tags-input input,
 .tags-input button {
-  display: block;
-  width: 100%;
-  height: 32px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.42857143;
   color: #555555;
   background-color: #fff;
   background-image: none;
   border: 1px solid #ccc;
-  border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
   border-radius: 1px;
   box-shadow: none;
   width: inherit;
@@ -11816,7 +11739,6 @@ select[multiple].tags-input button {
   height: 32px;
 }
 [dir="rtl"] #kernel_logo_widget {
-  float: left !important;
   float: left;
 }
 .modal .modal-body .move-path {
@@ -11884,7 +11806,6 @@ i.menu-icon {
   padding-top: 4px;
 }
 [dir="rtl"] i.menu-icon.pull-right {
-  float: left !important;
   float: left;
 }
 ul#help_menu li a {
@@ -11902,7 +11823,6 @@ ul#help_menu li a i {
   margin-left: -1.2em;
 }
 [dir="rtl"] ul#help_menu li a i.pull-right {
-  float: left !important;
   float: left;
 }
 .dropdown-submenu {
@@ -11922,7 +11842,6 @@ ul#help_menu li a i {
   display: block;
 }
 .dropdown-submenu > a:after {
-  display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -11964,36 +11883,29 @@ ul#help_menu li a i {
   margin-left: 10px;
 }
 #notification_area {
-  float: right !important;
   float: right;
   z-index: 10;
 }
 [dir="rtl"] #notification_area {
-  float: left !important;
   float: left;
 }
 .indicator_area {
-  float: right !important;
   float: right;
   color: #777;
   margin-left: 5px;
   margin-right: 5px;
-  width: 11px;
   z-index: 10;
   text-align: center;
   width: auto;
 }
 [dir="rtl"] .indicator_area {
-  float: left !important;
   float: left;
 }
 #kernel_indicator {
-  float: right !important;
   float: right;
   color: #777;
   margin-left: 5px;
   margin-right: 5px;
-  width: 11px;
   z-index: 10;
   text-align: center;
   width: auto;
@@ -12004,33 +11916,25 @@ ul#help_menu li a i {
   padding-right: 5px;
 }
 [dir="rtl"] #kernel_indicator {
-  float: left !important;
   float: left;
   border-left: 0;
   border-right: 1px solid;
 }
 #modal_indicator {
-  float: right !important;
   float: right;
   color: #777;
   margin-left: 5px;
   margin-right: 5px;
-  width: 11px;
   z-index: 10;
   text-align: center;
   width: auto;
 }
 [dir="rtl"] #modal_indicator {
-  float: left !important;
   float: left;
 }
 #readonly-indicator {
-  float: right !important;
   float: right;
   color: #777;
-  margin-left: 5px;
-  margin-right: 5px;
-  width: 11px;
   z-index: 10;
   text-align: center;
   width: auto;
@@ -12171,7 +12075,6 @@ ul#help_menu li a i {
   margin-left: .3em;
 }
 .notification_widget {
-  color: #777;
   z-index: 10;
   background: rgba(240, 240, 240, 0.5);
   margin-right: 4px;
@@ -12522,13 +12425,10 @@ div#pager .ui-resizable-handle::after {
 }
 .quickhelp {
   /* Old browsers */
-  display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-align: stretch;
-  display: -moz-box;
   -moz-box-orient: horizontal;
   -moz-box-align: stretch;
-  display: box;
   box-orient: horizontal;
   box-align: stretch;
   /* Modern browsers */
@@ -12576,7 +12476,6 @@ span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
 [dir="rtl"] span.save_widget.pull-left {
-  float: right !important;
   float: right;
 }
 [dir="rtl"] span.save_widget span.filename {
@@ -12620,7 +12519,6 @@ span.autosave_status {
 .toolbar label {
   width: auto;
   vertical-align: middle;
-  margin-right: 2px;
   margin-bottom: 0px;
   display: inline;
   font-size: 92%;
@@ -12752,9 +12650,6 @@ li.pulse.open > a.dropdown-toggle {
 .ipython_tooltip {
   max-width: 700px;
   /*fade-in animation when inserted*/
-  -webkit-animation: fadeOut 400ms;
-  -moz-animation: fadeOut 400ms;
-  animation: fadeOut 400ms;
   -webkit-animation: fadeIn 400ms;
   -moz-animation: fadeIn 400ms;
   animation: fadeIn 400ms;
@@ -12826,7 +12721,6 @@ ul.typeahead-list > li > a {
   white-space: normal;
 }
 ul.typeahead-list  > li > a.pull-right {
-  float: left !important;
   float: left;
 }
 [dir="rtl"] .typeahead-list {
@@ -12846,11 +12740,9 @@ ul.typeahead-list  > li > a.pull-right {
   color: transparent;
 }
 [dir="rtl"] .no-shortcut.pull-right {
-  float: left !important;
   float: left;
 }
 [dir="rtl"] .command-shortcut.pull-right {
-  float: left !important;
   float: left;
 }
 .command-shortcut:before {
@@ -12864,7 +12756,6 @@ ul.typeahead-list  > li > a.pull-right {
   color: #777777;
 }
 [dir="rtl"] .edit-shortcut.pull-right {
-  float: left !important;
   float: left;
 }
 #find-and-replace #replace-preview .match,
@@ -12932,4 +12823,3 @@ ul.typeahead-list  > li > a.pull-right {
 .terminal-app #terminado-container {
   margin-top: 20px;
 }
-/*# sourceMappingURL=style.min.css.map */
