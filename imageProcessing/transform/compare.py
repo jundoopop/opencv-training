@@ -1,10 +1,12 @@
 import cv2 as cv
 import translation as tr
 import numpy as np
-from pathlib import Path
+import os
 
-path = "/home/treeplanter/graphics/pyOpenCv/imageProcessing/source/paris.jpg"  # Path to the image
-sample1 = cv.imread(path, cv.IMREAD_GRAYSCALE)  # Get a first sample: Paris
+script_dir = os.path.dirname(os.path.abspath(__file__))
+image_path = os.path.normpath(os.path.join(script_dir, "..", "source", "paris.jpg"))
+
+sample1 = cv.imread(image_path, cv.IMREAD_GRAYSCALE)  # Get a first sample: Paris
 
 filter = np.array(
     [[1, 0], [0, 1]], np.uint8

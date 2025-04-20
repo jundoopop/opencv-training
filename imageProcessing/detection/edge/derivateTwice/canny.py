@@ -14,4 +14,4 @@ Gx = np.array(
 )
 Gy = np.array([[-1, -2, -1], [0, 0, 0], [1, 2, 1]])
 
-magnitude = np.sqrt(pow(Gx, 2) + pow(Gx, 2))
+magnitude = np.sqrt(np.power(Gx, 2) + np.power(Gy, 2))
